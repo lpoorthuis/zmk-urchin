@@ -9,6 +9,9 @@ manifest:
       # kyek / duckyb
     - name: duckyb
       url-base: https://github.com/duckyb
+      # nice-view-tardigrades
+    - name: lpoorthuis
+      url-base: https://github.com/lpoorthuis
       # nice-view-gem
     - name: m165437
       url-base: https://github.com/M165437
@@ -19,6 +22,9 @@ manifest:
       import: app/west.yml
     - name: urchin-zmk-module
       remote: duckyb
+      revision: main
+    - name: nice-view-mod
+      remote: lpoorthuis
       revision: main
     - name: nice-view-gem
       remote: m165437
