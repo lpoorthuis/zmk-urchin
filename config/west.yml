@@ -11,8 +11,6 @@ manifest:
       url-base: https://github.com/duckyb
     - name: lpoorthuis 
       url-base: https://github.com/lpoorthuis
-    - name: urob
-      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -23,9 +21,6 @@ manifest:
       revision: main
     - name: nice-view-mod
       remote: lpoorthuis
-      revision: main
-    - name: zmk-helpers 
-      remote: urob 
       revision: main
   self:
     path: config
