@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2020 duckyb
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include "34.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -13,16 +7,11 @@
 #define THUMBS LH1 LH0 RH0 RH1
 
 // Layer definitions
-
 #define BASE 0
-#define SYM 1
-#define EXT 2
-#define FNC 3
-#define SYM2 4
-#define ACCENT 5
-#define SETTINGS 6
-
-// -----------------
+#define NAV 1
+#define NUM 2
+#define FUN 3
+#define MEDIA 4
 
 / {
     behaviors {
@@ -43,7 +32,6 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
@@ -56,7 +44,6 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
@@ -64,28 +51,118 @@
 
     keymap {
         compatible = "zmk,keymap";
-
         /*
-     *  BASE ALPHA LAYER 
-     *
-     * ┌───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┐
-     * │ Q │ W │ E │ R │ T │       │ Y │ U │ I │ O │ P │
-     * ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
-     * │ A │ S │ D │ F │ G │       │ H │ J │ K │ L │ ; │
-     * ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
-     * │ Z │ X │ C │ V │ B │       │ N │ M │ , │ . │ / │
-     * └───┴───┴───┼───┼───┤       ├───┼───┼───┴───┴───┘
-     *             │   │ ⇧ │       │ _ │   │
-     *             └───┴───┘       └───┴───┘    
-     */
-
+         * BASE ALPHA LAYER
+         *
+         * ┌───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┐
+         * │ Q │ W │ E │ R │ T │       │ Y │ U │ I │ O │ P │
+         * ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
+         * │ A │ S │ D │ F │ G │       │ H │ J │ K │ L │ ; │
+         * ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
+         * │ Z │ X │ C │ V │ B │       │ N │ M │ , │ . │ / │
+         * └───┴───┴───┼───┼───┤       ├───┼───┼───┴───┴───┘
+         *             │NAV│NUM│       │FUN│MED│
+         *             └───┴───┘       └───┴───┘
+         */
         default_layer {
             label = "Base";
             bindings = <
-  &kp Q        &kp W         &kp E         &kp R        &kp T        &kp Y      &kp U          &kp I         &kp O         &kp P
-  &hml LALT A  &hml LCTRL S  &hml LSHFT D  &hml LGUI F  &kp G        &kp H      &hmr RGUI J    &hmr RSHFT K  &hmr RCTRL L  &hmr RALT SEMI
-  &kp Z        &kp X         &kp C         &kp V        &kp B        &kp N      &kp M          &kp COMMA     &kp DOT       &kp SLASH
-                                           &kp TAB      &kp SPACE    &kp ENTER  &kp BACKSPACE
+                &kp Q        &kp W         &kp E         &kp R        &kp T        &kp Y      &kp U          &kp I         &kp O         &kp P
+                &hml LALT A  &hml LCTRL S  &hml LSHFT D  &hml LGUI F  &kp G        &kp H      &hmr RGUI J    &hmr RSHFT K  &hmr RCTRL L  &hmr RALT SEMI
+                &kp Z        &kp X         &kp C         &kp V        &kp B        &kp N      &kp M          &kp COMMA     &kp DOT       &kp SLASH
+                                          &lt NAV TAB    &lt NUM SPACE    &lt FUN ENTER  &lt MEDIA BSPC
+            >;
+        };
+
+        /*
+         * NAVIGATION LAYER
+         *
+         * ┌───┬───┬────┬───┬───┐       ┌───┬───┬───┬───┬───┐
+         * │ESC│   │C+A+│   │   │       │   │   │   │   │   │
+         * ├───┼───┼────┼───┼───┤       ├───┼───┼───┼───┼───┤
+         * │GUI│ALT│SHFT│CTL│DEL│       │   │   │   │   │   │
+         * ├───┼───┼────┼───┼───┤       ├───┼───┼───┼───┼───┤
+         * │UND│CUT│COPY│PST│RED│       │   │   │   │   │   │
+         * └───┴───┴────┼───┼───┤       ├───┼───┼───┴───┴───┘
+         *              │   │   │       │   │   │
+         *              └───┴───┘       └───┴───┘
+         */
+        nav_layer {
+            label = "Nav";
+            bindings = <
+                &kp ESC      &none         &kp LC(LA(DEL)) &none      &none        &none      &none          &none         &none         &none
+                &kp LGUI     &kp LALT      &kp LSHFT       &kp LCTRL  &kp DEL      &none      &none          &none         &none         &none
+                &kp LC(Z)    &kp LC(X)     &kp LC(C)       &kp LC(V)  &kp LC(Y)    &none      &none          &none         &none         &none
+                                          &trans          &none                     &none      &none
+            >;
+        };
+
+        /*
+         * NUMBER/SYMBOL LAYER
+         *
+         * ┌───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┐
+         * │ ` │ 7 │ 8 │ 9 │ ] │       │ ` │ < │ > │ # │ ^ │
+         * ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
+         * │ . │ 4 │ 5 │ 6 │ - │       │ ! │ + │ - │ = │ & │
+         * ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
+         * │ / │ 1 │ 2 │ 3 │ + │       │ % │ / │ * │ - │ | │
+         * └───┴───┴───┼───┼───┤       ├───┼───┼───┴───┴───┘
+         *             │   │   │       │   │   │
+         *             └───┴───┘       └───┴───┘
+         */
+        num_layer {
+            label = "Num";
+            bindings = <
+                &kp GRAVE    &kp N7        &kp N8         &kp N9      &kp RBKT     &kp GRAVE  &kp LT         &kp GT        &kp HASH      &kp CARET
+                &kp DOT      &kp N4        &kp N5         &kp N6      &kp MINUS    &kp EXCL   &kp PLUS       &kp MINUS     &kp EQUAL     &kp AMPS
+                &kp FSLH     &kp N1        &kp N2         &kp N3      &kp PLUS     &kp PRCNT  &kp FSLH       &kp STAR      &kp MINUS     &kp PIPE
+                                          &none          &trans                     &none      &none
+            >;
+        };
+
+        /*
+         * FUNCTION LAYER
+         *
+         * ┌───┬───┬───┬───┬────┐       ┌────┬────┬───┬────┬────┐
+         * │   │F7 │F8 │F9 │F12 │       │PgUp│Home│ ↑ │End │Ins │
+         * ├───┼───┼───┼───┼────┤       ├────┼────┼───┼────┼────┤
+         * │   │F4 │F5 │F6 │F11 │       │PgDn│ ←  │ ↓ │ →  │Caps│
+         * ├───┼───┼───┼───┼────┤       ├────┼────┼───┼────┼────┤
+         * │   │F1 │F2 │F3 │F10 │       │    │    │   │    │    │
+         * └───┴───┴───┼───┼────┤       ├────┼────┼───┴────┴────┘
+         *             │   │    │       │    │    │
+         *             └───┴────┘       └────┴────┘
+         */
+        fun_layer {
+            label = "Fun";
+            bindings = <
+                &none        &kp F7        &kp F8         &kp F9      &kp F12      &kp PG_UP  &kp HOME       &kp UP        &kp END       &kp INS
+                &none        &kp F4        &kp F5         &kp F6      &kp F11      &kp PG_DN  &kp LEFT       &kp DOWN      &kp RIGHT     &kp CAPS
+                &none        &kp F1        &kp F2         &kp F3      &kp F10      &none      &none          &none         &none         &none
+                                          &none          &none                      &trans     &none
+            >;
+        };
+
+        /*
+         * MEDIA LAYER
+         *
+         * ┌────┬─────┬─────┬───┬───┐       ┌───┬───┬───┬───┬───┐
+         * │Vol-│Mute │Vol+ │   │   │       │ \ │ # │ @ │ $ │ ~ │
+         * ├────┼─────┼─────┼───┼───┤       ├───┼───┼───┼───┼───┤
+         * │Prev│Play │Next │   │   │       │ ( │ ( │ ) │ : │ : │
+         * ├────┼─────┼─────┼───┼───┤       ├───┼───┼───┼───┼───┤
+         * │Pscr│Sel  │PP   │   │   │       │ { │ [ │ ] │ . │ ? │
+         * └────┴─────┴─────┼───┼───┤       ├───┼───┼───┴───┴───┘
+         *                  │   │   │       │   │   │
+         *                  └───┴───┘       └───┴───┘
+         */
+        media_layer {
+            label = "Media";
+            bindings = <
+                &kp C_VOL_DN &kp C_MUTE    &kp C_VOL_UP   &none      &none        &kp BSLH   &kp HASH       &kp AT        &kp DLLR      &kp TILDE
+                &kp C_PREV   &kp C_PP      &kp C_NEXT     &none      &none        &kp LPAR   &kp LPAR       &kp RPAR      &kp COLON     &kp COLON
+                &kp PSCRN    &kp K_SEL     &kp K_PP       &none      &none        &kp LBRC   &kp LBKT       &kp RBKT      &kp DOT       &kp QMARK
+                                          &none          &none                      &none      &trans
             >;
         };
     };
