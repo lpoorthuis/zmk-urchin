@@ -151,7 +151,7 @@
          * ├────┼─────┼─────┼───┼───┤       ├───┼───┼───┼───┼───┤
          * │Prev│Play │Next │   │   │       │ ( │ ( │ ) │ : │ : │
          * ├────┼─────┼─────┼───┼───┤       ├───┼───┼───┼───┼───┤
-         * │Pscr│Sel  │PP   │   │   │       │ { │ [ │ ] │ . │ ? │
+         * │Pscr│     │     │   │   │       │ { │ [ │ ] │ . │ ? │
          * └────┴─────┴─────┼───┼───┤       ├───┼───┼───┴───┴───┘
          *                  │   │   │       │   │   │
          *                  └───┴───┘       └───┴───┘
@@ -161,7 +161,7 @@
             bindings = <
                 &kp C_VOL_DN &kp C_MUTE    &kp C_VOL_UP   &none      &none        &kp BSLH   &kp HASH       &kp AT        &kp DLLR      &kp TILDE
                 &kp C_PREV   &kp C_PP      &kp C_NEXT     &none      &none        &kp LPAR   &kp LPAR       &kp RPAR      &kp COLON     &kp COLON
-                &kp PSCRN    &kp K_SEL     &kp K_PP       &none      &none        &kp LBRC   &kp LBKT       &kp RBKT      &kp DOT       &kp QMARK
+                &kp PSCRN    &none         &none          &none      &none        &kp LBRC   &kp LBKT       &kp RBKT      &kp DOT       &kp QMARK
                                           &none          &none                      &none      &trans
             >;
         };
