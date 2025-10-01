@@ -4,8 +4,8 @@ on:
   push:
     paths:
       - "config/urchin.keymap"
+      - "keymap_drawer.config.yaml"
       #- "config/*.dtsi"
-      #- "keymap_drawer.config.yaml"
 
 jobs:
   draw:
@@ -15,7 +15,7 @@ jobs:
     with:
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       keymap_patterns: "config/urchin.keymap"
-      #config_path: "keymap_drawer.config.yaml"
+      config_path: "keymap_drawer.config.yaml"
       output_folder: "keymap-drawer"
       parse_args: ""
       draw_args: ""
