@@ -79,6 +79,11 @@
       bindings = < LAYOUT34_BASE >;
     };
 
+    button {
+      display-name = "Button";
+      bindings = < LAYOUT34_BUTTON>;
+    };
+
     nav {
       display-name = "Nav";
       bindings = < LAYOUT34_NAV >;
