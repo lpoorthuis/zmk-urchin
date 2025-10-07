@@ -5,7 +5,8 @@ on:
     paths:
       - "config/urchin.keymap"
       - "keymap_drawer.config.yaml"
-      #- "config/*.dtsi"
+      - "config/*.dtsi"
+      - "config/*.h"
 
 jobs:
   draw:
