@@ -21,7 +21,7 @@ layers:
   - {t: K, h: LCTRL}
   - {t: L, h: LALT}
   - {t: '''', h: LGUI}
-  - {t: Z, h: Nav}
+  - {t: Z, h: Button}
   - {t: X, h: RALT}
   - C
   - V
@@ -30,11 +30,46 @@ layers:
   - M
   - ','
   - {t: ., h: RALT}
-  - {t: /, h: Nav}
-  - {t: SPACE, h: Mouse}
-  - {t: TAB, h: Media}
-  - {t: RET, h: Fun}
-  - {t: BSPC, h: Sym}
+  - {t: /, h: Button}
+  - {t: SPACE, h: Nav}
+  - {t: TAB, h: Mouse}
+  - {t: RET, h: Sym}
+  - {t: BSPC, h: Num}
+  Button:
+  - Gui+Z
+  - Gui+X
+  - Gui+C
+  - Gui+V
+  - Sft+Gui+Z
+  - Sft+Gui+Z
+  - Gui+V
+  - Gui+C
+  - Gui+X
+  - Gui+Z
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - {t: Gui+Z, type: held}
+  - Gui+X
+  - Gui+C
+  - Gui+V
+  - Sft+Gui+Z
+  - Sft+Gui+Z
+  - Gui+V
+  - Gui+C
+  - Gui+X
+  - Gui+Z
+  - '&mkp MB1'
+  - '&mkp MB2'
+  - '&mkp MB2'
+  - '&mkp MB1'
   Nav:
   - ''
   - ''
@@ -56,7 +91,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - {type: held}
+  - ''
   - RALT
   - '&u_to_U_NUM'
   - '&u_to_U_NAV'
@@ -66,7 +101,7 @@ layers:
   - PG DN
   - PG UP
   - END
-  - ''
+  - {type: held}
   - ''
   - RET
   - BSPC
@@ -101,8 +136,8 @@ layers:
   - '&msc SCRL_DOWN'
   - '&msc SCRL_UP'
   - '&msc SCRL_RIGHT'
-  - {type: held}
   - ''
+  - {type: held}
   - '&mkp MB2'
   - '&mkp MB1'
   Media:
@@ -136,12 +171,45 @@ layers:
   - {t: BT, h: '1', s: '&u_macro_u_bt_sel_1'}
   - {t: BT, h: '2', s: '&u_macro_u_bt_sel_2'}
   - {t: BT, h: '3', s: '&u_macro_u_bt_sel_3'}
-  - ''
+  - {type: held}
   - {type: held}
   - STOP
   - PP
-  Num: ['[', '7', '8', '9', ']', '', '&u_to_U_BASE', '', '', '', ;, '4', '5', '6', '=', '', LSHFT, LCTRL, LALT, LGUI, '`', '1', '2', '3', \, '', '&u_to_U_NUM', '&u_to_U_NAV',
-    RALT, '', '0', '-', '', '']
+  Num:
+  - '['
+  - '7'
+  - '8'
+  - '9'
+  - ']'
+  - ''
+  - '&u_to_U_BASE'
+  - ''
+  - ''
+  - ''
+  - ;
+  - '4'
+  - '5'
+  - '6'
+  - '='
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - \
+  - ''
+  - '&u_to_U_NUM'
+  - '&u_to_U_NAV'
+  - RALT
+  - ''
+  - '0'
+  - '-'
+  - ''
+  - {type: held}
   Sym:
   - '{'
   - '&'
@@ -175,8 +243,8 @@ layers:
   - ''
   - )
   - _
-  - ''
   - {type: held}
+  - ''
   Fun:
   - F12
   - F7
@@ -211,4 +279,35 @@ layers:
   - SPACE
   - TAB
   - {type: held}
-  - ''
+  - {type: held}
+combos:
+- p: [30, 31]
+  k: {t: ESC, h: Media}
+  l: [Base]
+- p: [30, 31]
+  k: '&mkp MB3'
+  l: [Button]
+- p: [30, 31]
+  k: .
+  l: [Num]
+- p: [30, 31]
+  k: (
+  l: [Sym]
+- p: [30, 31]
+  k: APP
+  l: [Fun]
+- p: [32, 33]
+  k: {t: DEL, h: Fun}
+  l: [Base]
+- p: [32, 33]
+  k: '&mkp MB3'
+  l: [Button]
+- p: [32, 33]
+  k: DEL
+  l: [Nav]
+- p: [32, 33]
+  k: '&mkp MB3'
+  l: [Mouse]
+- p: [32, 33]
+  k: MUTE
+  l: [Media]
