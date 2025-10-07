@@ -11,167 +11,204 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: LALT}
-  - {t: S, h: LCTRL}
-  - {t: D, h: LSHFT}
-  - {t: F, h: LGUI}
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
   - G
   - H
-  - {t: J, h: RGUI}
-  - {t: K, h: RSHFT}
-  - {t: L, h: RCTRL}
-  - {t: ;, h: RALT}
-  - Z
-  - X
+  - {t: J, h: LSHFT}
+  - {t: K, h: LCTRL}
+  - {t: L, h: LALT}
+  - {t: '''', h: LGUI}
+  - {t: Z, h: Nav}
+  - {t: X, h: RALT}
   - C
   - V
   - B
   - N
   - M
   - ','
-  - .
-  - /
-  - {t: TAB, h: Nav}
-  - {t: SPACE, h: Num}
-  - {t: ENTER, h: Fun}
-  - {t: BSPC, h: Media}
+  - {t: ., h: RALT}
+  - {t: /, h: Nav}
+  - {t: SPACE, h: Mouse}
+  - {t: TAB, h: Media}
+  - {t: RET, h: Fun}
+  - {t: BSPC, h: Sym}
   Nav:
-  - ESC
-  - ''
-  - Ctl+Alt+DEL
   - ''
   - ''
   - ''
+  - '&u_to_U_BASE'
   - ''
-  - ''
-  - ''
-  - ''
+  - Sft+Gui+Z
+  - Gui+V
+  - Gui+C
+  - Gui+X
+  - Gui+Z
   - LGUI
   - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - {t: '&caps_word', s: CAPS}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {type: held}
+  - RALT
+  - '&u_to_U_NUM'
+  - '&u_to_U_NAV'
+  - ''
+  - INS
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - ''
+  - ''
+  - RET
+  - BSPC
+  Mouse:
+  - ''
+  - ''
+  - ''
+  - '&u_to_U_BASE'
+  - ''
+  - Sft+Gui+Z
+  - Gui+V
+  - Gui+C
+  - Gui+X
+  - Gui+Z
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - ''
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - ''
+  - RALT
+  - '&u_to_U_SYM'
+  - '&u_to_U_MOUSE'
+  - ''
+  - ''
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_RIGHT'
+  - {type: held}
+  - ''
+  - '&mkp MB2'
+  - '&mkp MB1'
+  Media:
+  - ''
+  - ''
+  - ''
+  - '&u_to_U_BASE'
+  - ''
+  - RGB TOG
+  - RGB EFF
+  - RGB HUI
+  - RGB SAI
+  - RGB BRI
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - EP TOG
+  - PREV
+  - VOL DN
+  - VOL UP
+  - NEXT
+  - ''
+  - RALT
+  - '&u_to_U_FUN'
+  - '&u_to_U_MEDIA'
+  - ''
+  - {t: OUT TOG, s: OUT USB}
+  - {t: BT, h: '0', s: '&u_macro_u_bt_sel_0'}
+  - {t: BT, h: '1', s: '&u_macro_u_bt_sel_1'}
+  - {t: BT, h: '2', s: '&u_macro_u_bt_sel_2'}
+  - {t: BT, h: '3', s: '&u_macro_u_bt_sel_3'}
+  - ''
+  - {type: held}
+  - STOP
+  - PP
+  Num: ['[', '7', '8', '9', ']', '', '&u_to_U_BASE', '', '', '', ;, '4', '5', '6', '=', '', LSHFT, LCTRL, LALT, LGUI, '`', '1', '2', '3', \, '', '&u_to_U_NUM', '&u_to_U_NAV',
+    RALT, '', '0', '-', '', '']
+  Sym:
+  - '{'
+  - '&'
+  - '*'
+  - (
+  - '}'
+  - ''
+  - '&u_to_U_BASE'
+  - ''
+  - ''
+  - ''
+  - ':'
+  - $
+  - '%'
+  - ^
+  - +
+  - ''
   - LSHFT
   - LCTRL
-  - DEL
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Ctl+Y
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  Num:
-  - '`'
-  - '7'
-  - '8'
-  - '9'
-  - ']'
-  - '`'
-  - <
-  - '>'
-  - '#'
-  - ^
-  - .
-  - '4'
-  - '5'
-  - '6'
-  - '-'
+  - LALT
+  - LGUI
+  - '~'
   - '!'
-  - +
-  - '-'
-  - '='
-  - '&'
-  - /
-  - '1'
-  - '2'
-  - '3'
-  - +
-  - '%'
-  - /
-  - '*'
-  - '-'
+  - '@'
+  - '#'
   - '|'
   - ''
+  - '&u_to_U_SYM'
+  - '&u_to_U_MOUSE'
+  - RALT
+  - ''
+  - )
+  - _
+  - ''
   - {type: held}
-  - ''
-  - ''
   Fun:
-  - ''
+  - F12
   - F7
   - F8
   - F9
-  - F12
-  - PG UP
-  - HOME
-  - UP
-  - END
-  - INS
+  - PSCRN
   - ''
+  - '&u_to_U_BASE'
+  - ''
+  - ''
+  - ''
+  - F11
   - F4
   - F5
   - F6
-  - F11
-  - PG DN
-  - LEFT
-  - DOWN
-  - RIGHT
-  - CAPS
+  - SLCK
   - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - F10
   - F1
   - F2
   - F3
-  - F10
+  - PAUSE BREAK
   - ''
+  - '&u_to_U_FUN'
+  - '&u_to_U_MEDIA'
+  - RALT
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - SPACE
+  - TAB
   - {type: held}
   - ''
-  Media:
-  - VOL DN
-  - MUTE
-  - VOL UP
-  - ''
-  - ''
-  - \
-  - '#'
-  - '@'
-  - $
-  - '~'
-  - PREV
-  - PP
-  - NEXT
-  - ''
-  - ''
-  - (
-  - (
-  - )
-  - ':'
-  - ':'
-  - PSCRN
-  - ''
-  - ''
-  - ''
-  - ''
-  - '{'
-  - '['
-  - ']'
-  - .
-  - '?'
-  - ''
-  - ''
-  - ''
-  - {type: held}
