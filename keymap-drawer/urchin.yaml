@@ -74,7 +74,7 @@ layers:
   - ''
   - ''
   - ''
-  - '&u_to_U_BASE'
+  - ''
   - ''
   - Sft+Gui+Z
   - Gui+V
@@ -93,8 +93,8 @@ layers:
   - RIGHT
   - ''
   - RALT
-  - '&u_to_U_NUM'
-  - '&u_to_U_NAV'
+  - ''
+  - ''
   - ''
   - INS
   - HOME
@@ -109,7 +109,7 @@ layers:
   - ''
   - ''
   - ''
-  - '&u_to_U_BASE'
+  - ''
   - ''
   - Sft+Gui+Z
   - Gui+V
@@ -128,8 +128,8 @@ layers:
   - '&mmv MOVE_RIGHT'
   - ''
   - RALT
-  - '&u_to_U_SYM'
-  - '&u_to_U_MOUSE'
+  - ''
+  - ''
   - ''
   - ''
   - '&msc SCRL_LEFT'
@@ -144,7 +144,7 @@ layers:
   - ''
   - ''
   - ''
-  - '&u_to_U_BASE'
+  - ''
   - ''
   - RGB TOG
   - RGB EFF
@@ -163,8 +163,8 @@ layers:
   - NEXT
   - ''
   - RALT
-  - '&u_to_U_FUN'
-  - '&u_to_U_MEDIA'
+  - ''
+  - ''
   - ''
   - {t: OUT TOG, s: OUT USB}
   - {t: BT, h: '0', s: '&u_macro_u_bt_sel_0'}
@@ -182,7 +182,7 @@ layers:
   - '9'
   - ']'
   - ''
-  - '&u_to_U_BASE'
+  - ''
   - ''
   - ''
   - ''
@@ -202,8 +202,8 @@ layers:
   - '3'
   - \
   - ''
-  - '&u_to_U_NUM'
-  - '&u_to_U_NAV'
+  - ''
+  - ''
   - RALT
   - ''
   - '0'
@@ -217,7 +217,7 @@ layers:
   - (
   - '}'
   - ''
-  - '&u_to_U_BASE'
+  - ''
   - ''
   - ''
   - ''
@@ -237,8 +237,8 @@ layers:
   - '#'
   - '|'
   - ''
-  - '&u_to_U_SYM'
-  - '&u_to_U_MOUSE'
+  - ''
+  - ''
   - RALT
   - ''
   - )
@@ -252,7 +252,7 @@ layers:
   - F9
   - PSCRN
   - ''
-  - '&u_to_U_BASE'
+  - ''
   - ''
   - ''
   - ''
@@ -272,8 +272,8 @@ layers:
   - F3
   - PAUSE BREAK
   - ''
-  - '&u_to_U_FUN'
-  - '&u_to_U_MEDIA'
+  - ''
+  - ''
   - RALT
   - ''
   - SPACE
