@@ -10,7 +10,6 @@
 #include <behaviors.dtsi>
 #include <behaviors/mouse_keys.dtsi>
 
-#include "tap_layer.dtsi"
 #include "shift_functions.dtsi"
 
 #define MIRYOKU_KLUDGE_THUMBCOMBOS_LEFT 30 31
